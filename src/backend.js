@@ -1,1 +1,1 @@
-export const API = process.env.REACT_APP_BACKEND;
+export const API = "https://thawing-escarpment-33798.herokuapp.com/api/";
