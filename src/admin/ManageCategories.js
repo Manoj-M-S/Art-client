@@ -44,7 +44,7 @@ const ManageCategories = () => {
         <div className="card-body">
           <div className="row">
             <div className="col-12">
-              <h2 className="text-center  my-3">
+              <h2 className="text-center">
                 Total {categories.length} categories
               </h2>
               {categories.map((category, index) => {
@@ -52,7 +52,7 @@ const ManageCategories = () => {
                   <div key={index}>
                     <ul className="list-group">
                       <li className="list-group-item">
-                        <div className="row text-center mb-2 ">
+                        <div className="row text-center ">
                           <div className="col-4">
                             <h3>{category.name}</h3>
                           </div>

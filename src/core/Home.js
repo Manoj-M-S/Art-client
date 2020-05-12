@@ -25,18 +25,23 @@ const Home = () => {
 
   return (
     <Base title="Home Page" description="Welcome to T-shirt store">
-      <div className="row text-center">
+      <div className=" text-center">
         <div className="lined-heading">
           <h3>Our Collection</h3>
         </div>
-        <div className="row">
-          {products.map((product, index) => {
-            return (
-              <div key={index} className="col-4 mb-4">
-                <Card product={product} />
-              </div>
-            );
-          })}
+        <div className="container mt-4">
+          <div className="card-deck">
+            <div className="row justify-content-center">
+              {products.map((product, index) => {
+                return (
+                  <div key={index} className="col-md-4 col-12">
+                    <Card product={product} />
+                    <br />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </Base>

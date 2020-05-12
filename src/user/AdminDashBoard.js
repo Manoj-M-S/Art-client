@@ -64,9 +64,9 @@ const AdminDashBoard = () => {
       description="Manage all of your products here"
       className="container  p-4"
     >
-      <div className="row">
-        <div className="col-4">{adminLeftSide()}</div>
-        <div className="col-8">{adminRightSide()}</div>
+      <div className="col-md-8 offset-md-2">
+        {adminRightSide()}
+        {adminLeftSide()}
       </div>
     </Base>
   );

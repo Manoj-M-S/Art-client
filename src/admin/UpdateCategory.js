@@ -90,20 +90,28 @@ const UpdateCategory = ({ match }) => {
   const UpdateCategoryForm = () => {
     return (
       <form>
-        <div className="form-group">
-          <p className="lead">Update Category</p>
-          <input
-            type="text"
-            className="form-control my-3"
-            onChange={handleChange}
-            value={name}
-            autoFocus
-            required
-            placeholder="For Ex.Summer"
-          />
-          <button onClick={onSubmit} className="btn btn-outline-danger rounded">
-            Update Category
-          </button>
+        <div className="card">
+          <div className="card-header lead">Enter Category</div>
+          <div className="card-body">
+            <div className="form-group">
+              <p className="lead">Update Category</p>
+              <input
+                type="text"
+                className="form-control my-3"
+                onChange={handleChange}
+                value={name}
+                autoFocus
+                required
+                placeholder="For Ex.Summer"
+              />
+              <button
+                onClick={onSubmit}
+                className="btn btn-outline-danger rounded"
+              >
+                Update Category
+              </button>
+            </div>
+          </div>
         </div>
       </form>
     );
@@ -113,16 +121,14 @@ const UpdateCategory = ({ match }) => {
     <Base
       title="Update a Category here"
       description="New category for photos"
-      className="container bg-success p-4"
+      className="container  p-4"
     >
-      <div className="row bg-white rounded">
-        <div className="col-md-8 offset-md-2">
-          {successMessage()}
-          {warningMessage()}
-          {UpdateCategoryForm()}
-          {goBack()}
-          {performRedirect()}
-        </div>
+      <div className="col-md-8 offset-md-2">
+        {successMessage()}
+        {warningMessage()}
+        {UpdateCategoryForm()}
+        {goBack()}
+        {performRedirect()}
       </div>
     </Base>
   );

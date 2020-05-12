@@ -44,9 +44,7 @@ const ManageProducts = () => {
         <div className="card-body">
           <div className="row">
             <div className="col-12">
-              <h2 className="text-center  my-3">
-                Total {products.length} products
-              </h2>
+              <h2 className="text-center">Total {products.length} products</h2>
 
               {products &&
                 products.map((product, index) => {
@@ -54,7 +52,7 @@ const ManageProducts = () => {
                     <div key={index}>
                       <ul className="list-group">
                         <li className="list-group-item">
-                          <div className="row text-center mb-2 ">
+                          <div className="row text-center ">
                             <div className="col-4">
                               <h3>{product.name}</h3>
                             </div>

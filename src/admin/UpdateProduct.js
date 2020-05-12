@@ -134,79 +134,84 @@ const UpdateProduct = ({ match }) => {
   );
 
   const updateProductForm = () => (
-    <form>
-      <span>Post photo</span>
-      <div className="form-group">
-        <label className="btn btn-block btn-success rounded">
-          <input
-            onChange={handleChange("photo")}
-            type="file"
-            name="photo"
-            accept="image"
-            placeholder="choose a file"
-          />
-        </label>
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("name")}
-          name="photo"
-          className="form-control"
-          placeholder="Name"
-          value={name}
-        />
-      </div>
-      <div className="form-group">
-        <textarea
-          onChange={handleChange("description")}
-          name="photo"
-          className="form-control"
-          placeholder="Description"
-          value={description}
-        />
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("price")}
-          type="number"
-          className="form-control"
-          placeholder="Price"
-          value={price}
-        />
-      </div>
-      <div className="form-group">
-        <select
-          onChange={handleChange("category")}
-          className="form-control"
-          placeholder="Category"
-        >
-          <option>Select</option>
-          {categories &&
-            categories.map((cate, index) => (
-              <option key={index} value={cate._id}>
-                {cate.name}
-              </option>
-            ))}
-        </select>
-      </div>
-      <div className="form-group">
-        <input
-          onChange={handleChange("stock")}
-          type="number"
-          className="form-control"
-          placeholder="Stock"
-          value={stock}
-        />
-      </div>
+    <div className="card">
+      <div className="card-header lead">Enter Category</div>
+      <div className="card-body">
+        <form>
+          <span>Post photo</span>
+          <div className="form-group">
+            <label className="btn btn-block btn-success rounded">
+              <input
+                onChange={handleChange("photo")}
+                type="file"
+                name="photo"
+                accept="image"
+                placeholder="choose a file"
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <input
+              onChange={handleChange("name")}
+              name="photo"
+              className="form-control"
+              placeholder="Name"
+              value={name}
+            />
+          </div>
+          <div className="form-group">
+            <textarea
+              onChange={handleChange("description")}
+              name="photo"
+              className="form-control"
+              placeholder="Description"
+              value={description}
+            />
+          </div>
+          <div className="form-group">
+            <input
+              onChange={handleChange("price")}
+              type="number"
+              className="form-control"
+              placeholder="Price"
+              value={price}
+            />
+          </div>
+          <div className="form-group">
+            <select
+              onChange={handleChange("category")}
+              className="form-control"
+              placeholder="Category"
+            >
+              <option>Select</option>
+              {categories &&
+                categories.map((cate, index) => (
+                  <option key={index} value={cate._id}>
+                    {cate.name}
+                  </option>
+                ))}
+            </select>
+          </div>
+          <div className="form-group">
+            <input
+              onChange={handleChange("stock")}
+              type="number"
+              className="form-control"
+              placeholder="Stock"
+              value={stock}
+            />
+          </div>
 
-      <button
-        type="submit"
-        onClick={onSubmit}
-        className="btn btn-outline-success mb-2 rounded"
-      >
-        Update Product
-      </button>
-    </form>
+          <button
+            type="submit"
+            onClick={onSubmit}
+            className="btn btn-outline-success mb-2 rounded"
+          >
+            Update Product
+          </button>
+        </form>
+      </div>
+    </div>
   );
 
   return (
@@ -215,16 +220,18 @@ const UpdateProduct = ({ match }) => {
       description="Welcome to product creation"
       className="container  p-4"
     >
-      <Link to="/admin/dashboard" className="btn btn-md btn-success mb-3">
+      <Link
+        to="/admin/dashboard"
+        className="btn btn-md btn-success rounded mb-3"
+      >
         Admin Home
       </Link>
-      <div className="row rounded">
-        <div className="col-md-8 offset-md-2">
-          {performRedirect()}
-          {successMessage()}
-          {warningMessage()}
-          {updateProductForm()}
-        </div>
+
+      <div className="col-md-8 offset-md-2">
+        {performRedirect()}
+        {successMessage()}
+        {warningMessage()}
+        {updateProductForm()}
       </div>
     </Base>
   );
