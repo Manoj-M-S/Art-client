@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { loadCart, cartEmpty } from "./helper/cartHelper";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { getmeToken, processPayment } from "./helper/paymentBHelper";
 import { createOrder } from "./helper/orderHelper";
 import { isAuthenticated } from "../auth/helper";
@@ -77,7 +77,7 @@ const Paymentb = ({ products, setReload = (f) => f, reload = undefined }) => {
           };
           createOrder(userId, token, orderData);
           cartEmpty(() => {
-            console.log("Did we got a crash?");
+            window.location.href = "/";
           });
 
           setReload(!reload);

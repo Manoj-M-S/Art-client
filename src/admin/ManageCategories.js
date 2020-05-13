@@ -25,7 +25,7 @@ const ManageCategories = () => {
 
   const deleteThisCategory = (categoryId) => {
     deleteCategory(categoryId, user._id, token).then((data) => {
-      if (data?.error) {
+      if (data.error) {
         console.log(data.error);
       } else {
         preload();
@@ -36,8 +36,11 @@ const ManageCategories = () => {
   return (
     <Base title="Welcome admin" description="Manage Categories here">
       <h2 className="mb-4 ">All Categories:</h2>
-      <Link className="btn btn-dark rounded" to={`/admin/dashboard`}>
-        <span>Admin Home</span>
+      <Link
+        to="/admin/dashboard"
+        className="btn btn-md btn-success mb-3 rounded"
+      >
+        Admin Home
       </Link>
       <div className="card">
         <div className="card-header lead">Manage Category</div>
@@ -54,7 +57,7 @@ const ManageCategories = () => {
                       <li className="list-group-item">
                         <div className="row text-center ">
                           <div className="col-4">
-                            <h3>{category.name}</h3>
+                            <h5>{category.name}</h5>
                           </div>
                           <div className="col-4">
                             <Link

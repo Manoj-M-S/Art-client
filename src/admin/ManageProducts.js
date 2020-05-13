@@ -36,8 +36,11 @@ const ManageProducts = () => {
   return (
     <Base title="Welcome admin" description="Manage products here">
       <h2 className="mb-4 ">All products:</h2>
-      <Link className="btn btn-dark rounded" to={`/admin/dashboard`}>
-        <span>Admin Home</span>
+      <Link
+        to="/admin/dashboard"
+        className="btn btn-md btn-success mb-3 rounded"
+      >
+        Admin Home
       </Link>
       <div className="card">
         <div className="card-header lead">Manage products</div>
@@ -54,7 +57,7 @@ const ManageProducts = () => {
                         <li className="list-group-item">
                           <div className="row text-center ">
                             <div className="col-4">
-                              <h3>{product.name}</h3>
+                              <h5>{product.name}</h5>
                             </div>
                             <div className="col-4">
                               <Link
