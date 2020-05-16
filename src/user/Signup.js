@@ -10,10 +10,10 @@ const Signup = () => {
     email: "",
     password: "",
     error: "",
-    // success: false,
+    success: false,
   });
 
-  const { name, email, password, error } = values;
+  const { name, email, password, error, success } = values;
 
   const handleChange = (name) => (event) => {
     setValues({ ...values, error: false, [name]: event.target.value });
@@ -83,19 +83,19 @@ const Signup = () => {
     );
   };
 
-  // const successMessage = () => (
-  //   <div className="row">
-  //     <div className="col-md-6 offset-sm-3 text-left">
-  //       <div
-  //         className="alert alert-success"
-  //         style={{ display: success ? "" : "none" }}
-  //       >
-  //         New account was created successfully. Please
-  //         <Link to="/signin">Login Here</Link>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
+  const successMessage = () => (
+    <div className="row">
+      <div className="col-md-6 offset-sm-3 text-left">
+        <div
+          className="alert alert-success"
+          style={{ display: success ? "" : "none" }}
+        >
+          New account was created successfully. Please
+          <Link to="/signin">Login Here</Link>
+        </div>
+      </div>
+    </div>
+  );
 
   const errorMessage = () => (
     <div className="row">
@@ -112,7 +112,7 @@ const Signup = () => {
 
   return (
     <Base title="Sign up page" description="A page for user to sign up!">
-      {/* {successMessage()} */}
+      {successMessage()}
       {errorMessage()}
       {signUpForm()}
     </Base>

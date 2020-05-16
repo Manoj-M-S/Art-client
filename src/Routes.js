@@ -4,8 +4,8 @@ import Home from "./core/Home";
 import Signup from "./user/Signup";
 import Signin from "./user/Signin";
 import AdminRoute from "./auth/helper/AdminRoutes";
-// import PrivateRoute from "./auth/helper/PrivateRoutes";
-// import UserDashBoard from "./user/UserDashBoard";
+import PrivateRoute from "./auth/helper/PrivateRoutes";
+import UserDashBoard from "./user/UserDashBoard";
 import AdminDashBoard from "./user/AdminDashBoard";
 import AddCategory from "./admin/AddCategory";
 import ManageCategories from "./admin/ManageCategories";
@@ -26,7 +26,7 @@ const Routes = () => {
         <Route path="/signin" exact component={Signin} />
         <Route path="/cart" exact component={Cart} />
 
-        {/* <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} /> */}
+        <PrivateRoute path="/user/dashboard" exact component={UserDashBoard} />
         <AdminRoute path="/admin/dashboard" exact component={AdminDashBoard} />
         <AdminRoute
           path="/admin/create/category"
