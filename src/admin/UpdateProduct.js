@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Base from "../core/Base";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   getCategories,
   getProduct,
@@ -18,8 +18,6 @@ const UpdateProduct = ({ match }) => {
     stock: "",
     photo: "",
     categories: [],
-    category: "",
-    loading: false,
     error: "",
     createdProduct: "",
     getaRedirect: false,
@@ -32,8 +30,6 @@ const UpdateProduct = ({ match }) => {
     price,
     stock,
     categories,
-    category,
-    loading,
     error,
     createdProduct,
     getaRedirect,

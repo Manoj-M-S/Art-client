@@ -35,7 +35,6 @@ const ManageCategories = () => {
 
   return (
     <Base title="Welcome admin" description="Manage Categories here">
-      <h2 className="mb-4 ">All Categories:</h2>
       <Link
         to="/admin/dashboard"
         className="btn btn-md btn-success mb-3 rounded"

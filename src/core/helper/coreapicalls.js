@@ -1,5 +1,4 @@
 import { API } from "../../backend";
-import { Fragment } from "react";
 
 export const getProducts = () => {
   return fetch(`${API}/products`, {

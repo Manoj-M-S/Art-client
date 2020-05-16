@@ -14,11 +14,8 @@ const AddProduct = () => {
     stock: "",
     photo: "",
     categories: [],
-    category: "",
-    loading: false,
     error: "",
     createdProduct: "",
-    getaRedirect: "false",
     formData: "",
   });
 
@@ -28,11 +25,8 @@ const AddProduct = () => {
     price,
     stock,
     categories,
-    category,
-    loading,
     error,
     createdProduct,
-    getaRedirect,
     formData,
   } = values;
 

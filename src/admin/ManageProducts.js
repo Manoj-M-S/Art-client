@@ -35,7 +35,6 @@ const ManageProducts = () => {
 
   return (
     <Base title="Welcome admin" description="Manage products here">
-      <h2 className="mb-4 ">All products:</h2>
       <Link
         to="/admin/dashboard"
         className="btn btn-md btn-success mb-3 rounded"

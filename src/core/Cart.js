@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles.css";
-import { API } from "../backend";
+//import { API } from "../backend";
 import Base from "./Base";
 import Card from "./Card";
 import { loadCart } from "./helper/cartHelper";
@@ -17,7 +17,7 @@ const Cart = () => {
   const loadAllProducts = (products) => {
     return (
       <div>
-        <h2>This is Section is to load products</h2>
+        <h2>Your Cart</h2>
         {products.map((product, index) => (
           <Card
             key={index}
@@ -32,13 +32,13 @@ const Cart = () => {
     );
   };
 
-  const loadCheckOut = () => {
-    return (
-      <div>
-        <h2>This is Section is for checkout</h2>
-      </div>
-    );
-  };
+  // const loadCheckOut = () => {
+  //   return (
+  //     <div>
+  //       <h2>This is Section is for checkout</h2>
+  //     </div>
+  //   );
+  // };
 
   return (
     <Base title="Cart Page" description="Ready to checkout">

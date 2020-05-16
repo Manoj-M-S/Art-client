@@ -24,10 +24,10 @@ const Home = () => {
   }, []);
 
   return (
-    <Base title="Home Page" description="Welcome to T-shirt store">
+    <Base title="Home Page" description="Welcome to Art store">
       <div className=" text-center">
         <div className="lined-heading">
-          <h3>Our Collection</h3>
+          <h2>Our Collection</h2>
         </div>
         <div className="container mt-4">
           <div className="card-deck">

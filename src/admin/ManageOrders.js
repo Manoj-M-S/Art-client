@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Base from "../core/Base";
 import { Link } from "react-router-dom";
 import { isAuthenticated } from "../auth/helper";
-import { getOrders, getOrder } from "../core/helper/orderHelper";
+import { getOrders } from "../core/helper/orderHelper";
 
 const ManageOrders = () => {
   const [Orders, setOrders] = useState([]);
@@ -22,16 +22,6 @@ const ManageOrders = () => {
   useEffect(() => {
     preload();
   }, []);
-
-  // const getMyOrder = (orderId) => {
-  //   getOrder(orderId, user._id, token).then((data) => {
-  //     if (data.error) {
-  //       console.log(data.error);
-  //     } else {
-  //       return <Redirect to=''
-  //     }
-  //   });
-  // };
 
   return (
     <Base title="Welcome admin" description="Manage Orders here">
@@ -84,7 +74,7 @@ const ManageOrders = () => {
                           <div className="col-4">
                             <Link
                               className="btn btn-success rounded"
-                              to={`/admin/order/${order._id}/${user._id}`}
+                              to={`/admin/order/${order._id}`}
                             >
                               <span>Details</span>
                             </Link>
