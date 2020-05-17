@@ -13,10 +13,10 @@ const UserDashBoard = () => {
         <h4 className="card-header">User Information</h4>
         <ul className="list-group">
           <li className="list-group-item">
-            <span className="badge badge-success mr-3">Name:</span> {name}
+            <span className="badge badge-success mr-3">Name :</span> {name}
           </li>
           <li className="list-group-item">
-            <span className="badge badge-success mr-3">Email:</span> {email}
+            <span className="badge badge-success mr-3">Email :</span> {email}
           </li>
         </ul>
       </div>

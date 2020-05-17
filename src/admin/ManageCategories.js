@@ -41,47 +41,49 @@ const ManageCategories = () => {
       >
         Admin Home
       </Link>
-      <div className="card">
-        <div className="card-header lead">Manage Category</div>
-        <div className="card-body">
-          <div className="row">
-            <div className="col-12">
-              <h2 className="text-center">
-                Total {categories.length} categories
-              </h2>
-              {categories.map((category, index) => {
-                return (
-                  <div key={index}>
-                    <ul className="list-group">
-                      <li className="list-group-item">
-                        <div className="row text-center ">
-                          <div className="col-4">
-                            <h5>{category.name}</h5>
+      <div className="col-md-8 offset-md-2">
+        <div className="card">
+          <div className="card-header lead">Manage Category</div>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-12">
+                <h2 className="text-center">
+                  Total {categories.length} categories
+                </h2>
+                {categories.map((category, index) => {
+                  return (
+                    <div key={index}>
+                      <ul className="list-group">
+                        <li className="list-group-item">
+                          <div className="row text-center ">
+                            <div className="col-4">
+                              <h5>{category.name}</h5>
+                            </div>
+                            <div className="col-4">
+                              <Link
+                                className="btn btn-success rounded"
+                                to={`/admin/category/update/${category._id}`}
+                              >
+                                <span>Update</span>
+                              </Link>
+                            </div>
+                            <div className="col-4">
+                              <button
+                                onClick={() => {
+                                  deleteThisCategory(category._id);
+                                }}
+                                className="btn btn-danger rounded"
+                              >
+                                Delete
+                              </button>
+                            </div>
                           </div>
-                          <div className="col-4">
-                            <Link
-                              className="btn btn-success rounded"
-                              to={`/admin/category/update/${category._id}`}
-                            >
-                              <span>Update</span>
-                            </Link>
-                          </div>
-                          <div className="col-4">
-                            <button
-                              onClick={() => {
-                                deleteThisCategory(category._id);
-                              }}
-                              className="btn btn-danger rounded"
-                            >
-                              Delete
-                            </button>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                );
-              })}
+                        </li>
+                      </ul>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>

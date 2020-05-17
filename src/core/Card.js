@@ -69,7 +69,7 @@ const Card = ({
         <ImageHelper product={product} />
         <p className="lead font-weight-normal text-wrap">{cartDescription}</p>
         <p className="btn btn-dark rounded text-white  btn-sm px-4">
-          $ {cartPrice}
+          <i class="fas fa-rupee-sign"></i> {cartPrice}
         </p>
         <div className="row">
           <div className="col-12">{showAddToCart(addtoCart)}</div>

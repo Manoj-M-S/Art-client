@@ -32,59 +32,63 @@ const ManageOrders = () => {
       >
         Admin Home
       </Link>
-      <div className="card">
-        <div className="card-header lead">Manage Orders</div>
-        <div className="row">
-          <div className="col-12">
-            <h2 className="text-center">Total {Orders.length} Orders</h2>
-            <br />
-            <ul>
-              <div className="row text-center ">
-                <div className="col-4">
-                  <h5>
-                    <b>Order ID</b>
-                  </h5>
-                </div>
-                <div className="col-4">
-                  <h5>
-                    <b>Status</b>
-                  </h5>
-                </div>
-                <div className="col-4">
-                  <h5>
-                    <b>Details</b>
-                  </h5>
-                </div>
-              </div>
-            </ul>
-
-            {Orders &&
-              Orders.map((order, index) => {
-                return (
-                  <div key={index}>
-                    <ul className="list-group">
-                      <li className="list-group-item">
-                        <div className="row text-center ">
-                          <div className="col-4">
-                            <h5>{order._id}</h5>
-                          </div>
-                          <div className="col-4">
-                            <h5>{order.status}</h5>
-                          </div>
-                          <div className="col-4">
-                            <Link
-                              className="btn btn-success rounded"
-                              to={`/admin/order/${order._id}`}
-                            >
-                              <span>Details</span>
-                            </Link>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
+      <div className="col-md-10 offset-md-1">
+        <div className="card">
+          <div className="card-header lead">Manage Orders</div>
+          <div className="card-body">
+            <div className="row">
+              <div className="col-12">
+                <h2 className="text-center">Total {Orders.length} Orders</h2>
+                <br />
+                <ul>
+                  <div className="row text-center ">
+                    <div className="col-4">
+                      <h5>
+                        <b>Order ID</b>
+                      </h5>
+                    </div>
+                    <div className="col-4">
+                      <h5>
+                        <b>Status</b>
+                      </h5>
+                    </div>
+                    <div className="col-4">
+                      <h5>
+                        <b>Details</b>
+                      </h5>
+                    </div>
                   </div>
-                );
-              })}
+                </ul>
+
+                {Orders &&
+                  Orders.map((order, index) => {
+                    return (
+                      <div key={index}>
+                        <ul className="list-group">
+                          <li className="list-group-item">
+                            <div className="row text-center ">
+                              <div className="col-4">
+                                <h5>{order._id}</h5>
+                              </div>
+                              <div className="col-4">
+                                <h5>{order.status}</h5>
+                              </div>
+                              <div className="col-4">
+                                <Link
+                                  className="btn btn-success rounded"
+                                  to={`/admin/order/${order._id}`}
+                                >
+                                  <span>Details</span>
+                                </Link>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    );
+                  })}
+              </div>
+            </div>
           </div>
         </div>
       </div>
