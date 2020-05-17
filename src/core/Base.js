@@ -26,7 +26,7 @@ const Base = ({
               All artwork appearing on this website is the property of Manoj M S
               and is protected under India and International law. The artwork
               may not be reproduced, stored, or manipulated without the written
-              permission of the artist..
+              permission of the artist.
             </p>
             <p className="pt-4 text-muted">
               Copyright @2019 All rights reserved | This is made by

@@ -13,20 +13,17 @@
 
 .jumbotron {
   background: none;
+
+  padding-bottom: 5px;
 }
 
 body {
   background-color: #ffffff;
   background-image: url("https://www.transparenttextures.com/patterns/simple-dashed.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  /* background-image: url("https://images.pexels.com/photos/1764702/pexels-photo-1764702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
   font-family: Quicksand;
   font-size: medium;
-  /* height: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
+
 }
 
 footer {
@@ -57,7 +54,7 @@ footer .column i {
   color: #dd2476;
 }
 
-footer .column i + i {
+footer .column i+i {
   padding: 0 0.5em;
 }
 
